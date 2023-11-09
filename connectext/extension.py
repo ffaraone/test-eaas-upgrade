@@ -35,6 +35,7 @@ class E2EExtension(Extension):
 
     def approve_asset_request(self, request, template_id):
         self.logger.info(f'request_id={request["id"]} - template_id={template_id}')
+        self.logger.info(f'request_id={request["id"]} - template_id={template_id}')
         self.client.requests[request['id']]('approve').post(
             {
                 'template_id': template_id,
